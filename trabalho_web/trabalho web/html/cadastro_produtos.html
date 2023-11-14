@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../js/cadastrar_produtos.js"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+      <div class="juntos">
+        <div class="logo">
+          <img src="../img/logopneucompleto.ico" width="80" height="110" />
+        </div>
+        <div class="buscar">      
+          <input type="text" placeholder="Buscar..." />
+        </div>
+      </div>
+      
+      <div class="menu">
+        <i id="botao-menu" class="material-icons">menu</i>
+        <ul id="menu-dropdown">
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="inicial_adm.html">Lista de Produtos</a></li>
+          <li><a href="cadastro_produtos.html">Cadastrar Produto</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div id="cadastrar-produtos" class="produtos">
+      <form action="../php/processar_produto.php" method="post" enctype="multipart/form-data" class="cadastro-card">
+          <div class="form-item">
+              <label for="nome">Nome do Produto:</label>
+              <input type="text" name="nome" id="nome" required>
+          </div>
+
+          <div class="form-item">
+              <label for="descricao">Descrição:</label>
+              <textarea name="descricao" id="descricao" required></textarea>
+          </div>
+
+          <div class="form-item">
+              <label for="preco">Preço:</label>
+              <input type="text" name="preco" id="preco" required>
+          </div>
+
+          <div class="form-item">
+              <label for="quantidade">Quantidade em Estoque:</label>
+              <input type="text" name="quantidade" id="quantidade" required>
+          </div>
+
+          <div class="form-item">
+              <label for="imagem">Imagem do Produto (PNG apenas):</label>
+              <input id="adicionar_imagem" type="file" name="imagem" accept=".png" required>
+
+          </div>
+
+          <div class="form-item">
+              <label for="nome_arquivo">Nome do Arquivo de Imagem (opcional):</label>
+              <input type="text" name="nome_arquivo" placeholder="Deixe em branco para manter o nome original">
+          </div>
+
+          <button id="adicionar_produto" type="submit">Adicionar Produto</button>
+      </form>
+  </div>
+
+</body>
+
+</html>

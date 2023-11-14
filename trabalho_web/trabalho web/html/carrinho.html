@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+        />
+        <script src="../js/carrinho.js"></script>
+        <title>LOJINHA DO PNEU</title>
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <div class="juntos">
+                <div class="logo">
+                <img src="../img/logopneucompleto.ico" width="80" height="110" />
+                </div>
+                <div class="buscar">
+                <!-- <input type="text" placeholder="Buscar..." /> -->
+                </div>
+            </div>
+
+            <div class="menu">
+                <i id="botao-menu" class="material-icons">menu</i>
+                <ul id="menu-dropdown">
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="administrador.html">Administrador</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <table>
+            <tbody id="carrinho-lista"></tbody>
+        </table>
+        <div class="total">
+        <p>Total: <span id="valor-total">0.00</span></p>
+        </div>
+
+        <div class="metodo-pagamento">
+        <p>Selecione o método de pagamento:</p>
+        <input
+            type="radio"
+            name="pagamento"
+            value="pix"
+            id="pix-option"
+            onchange="mostrarImagemPix()"
+        />
+        PIX
+        <input
+            type="radio"
+            name="pagamento"
+            value="credito"
+            id="credito-option"
+        />
+        Crédito
+        <input type="radio" name="pagamento" value="debito" id="debito-option" />
+        Débito
+        </div>
+        <div id="imagem-pix" style="display: none">
+        <img src="../img/qrcode.png" alt="PIX" width="100" />
+        </div>
+
+        <div id="formulario-cartao" style="display: none">
+        <input type="text" id="numero-cartao" placeholder="Número do cartão" />
+        <input
+            type="text"
+            id="data-validade"
+            placeholder="Data de validade (MM/AA)"
+        />
+        <input type="text" id="cvv" placeholder="CVV" />
+        <button id="finalizar-compra-cartao">Finalizar Compra</button>
+        </div>
+    </body>
+    </html>

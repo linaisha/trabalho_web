@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../js/administrador.js"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="juntos">
+            <div class="logo">
+                <img src="../img/logopneucompleto.ico" width="80" height="110" />
+                
+            </div>
+            <div class="buscar">      
+            </div>
+        </div>
+    
+        <div class="menu">
+            <i id="botao-menu" class="material-icons">menu</i>
+            <ul id="menu-dropdown">
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="administrador.html">Administrador</a></li> 
+            </ul>
+        </div>
+    </header>
+
+    <h1 id="titulo_adm">Área do Administrador</h1>
+
+    <div id="admin-login" class="admin-login">
+        <form id="admin-login-form" action="#" method="post" class="form-admin">
+            <div class="input-container">
+                <label for="username">Digite seu login</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Digite sua senha</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
